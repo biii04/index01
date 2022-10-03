@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="login.css" />
-    <title>사이트: 로그인</title>
+    <title>로그인 페이지</title>
 
   </head>
   <body>
@@ -21,46 +21,60 @@
                 <div class="card-body p-5 text-center">
       
                   <div class="mb-md-5 mt-md-4 pb-5">
-
+                    
                     <!-- Login input-->
-                    <h2 class="fw-bold mb-2 text-uppercase">Sign up</h2>
-                    <p class="text-white-50 mb-5">Please enter the form</p>
+                    <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                    <p class="text-white-50 mb-5">Please enter your login and password!</p>
                      
                     <!--Email input-->
                     <div class="form-outline form-white mb-4">
-                      <input type="email" id="typeEmailX" class="form-control form-control-lg" placeholder="Username" />
-                      <label class="email" for="typeEmailX"></label>
+                      <input type="email" id="typeEmailX" class="form-control form-control-lg" placeholder="Email" />
+                      <label class="form-label" for="typeEmailX"></label>
                     </div>
                     
                     <!--Password input-->
                     <div class="form-outline form-white mb-4">
                       <input type="password" id="typePasswordX" class="form-control form-control-lg" placeholder="Password"/>
                       <label class="form-label" for="typePasswordX"></label>
+
+                    <!-- Default checkbox -->
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                      <label class="form-check-label" for="flexCheckDefault">Stay signed in</label><br><br>
+                      </div>                   
                     </div>
 
-                    <div class="form-outline form-white mb-4">
-                        <input type="password" id="typePasswordX" class="form-control form-control-lg" placeholder="Password Confirm"/>
-                        <label class="form-label" for="typePasswordX"></label><br>
-                      </div>
+
+                    <p class="small mb-4 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
+
+        
+                    <button class="btn btn-outline-light btn-lg px-5" type="submit">Sign In</button><br><br>
+
+                    <div class="clearfix">
+                      <button type="button" class="btn btn-success btn-lg px-5">NAVER</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                      <button type="button" class="btn btn-warning btn-lg px-5">KAKAO</button>
+
       
-                      <div class="clearfix">
-                        <button type="button" class="btn btn-outline-light btn-lg px-5"><a href="index.html">Cancel</a></button>
-                        <button type="submit" class="btn btn-outline-light btn-lg px-5">Sign Up</button><br><br>
-                        
-                        
-                        <label>
-                          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-                        </label>
-                      
-                      <div id="grid">
-                        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-                      </div>
+                    <div class="d-flex justify-content-center text-center mt-4 pt-1">
+                      <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                      <a href="#!" class="text-white"><i class="fab fa-twitter fa-lg mx-4 px-2"></i></a>
+                      <a href="#!" class="text-white"><i class="fab fa-google fa-lg"></i></a>
+                        </div>
+
+                        <div>
+                          <p class="mb-0">Don't have an account? <a class="text-white-50 fw-bold" href="join.html">Sign Up</a>
+                          </p>
+                          </div>
+                          <p class="big mb-5 pb-lg-2"><a class="text-white-50 fw-bold" href="main.html"><strong>HOMEPAGE</strong></a></p>
+                          </div>
                     </div>
+      
+                  </div>
+                  </div>
                 </div>
+              </div>
             </div>
           </div>
-        </div>
-        </div>
         </div>
       </section>
 

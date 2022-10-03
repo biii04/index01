@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="login.css" />
+    <title>회원가입 페이지</title>
+
+  </head>
+  <body>
+
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+              <div class="card bg-danger text-white" style="border-radius: 1rem;">
+                <div class="card-body p-5 text-center">
+      
+                  <div class="mb-md-5 mt-md-4 pb-5">
+
+                    <!-- Login input-->
+                    <h2 class="fw-bold mb-2 text-uppercase">Sign up</h2>
+                    <p class="text-white-50 mb-5">Please enter the form</p>
+                     
+                    <!--Email input-->
+                    <div class="form-outline form-white mb-4">
+                      <input type="email" id="typeEmailX" class="form-control form-control-lg" placeholder="Username" />
+                      <label class="email" for="typeEmailX"></label>
+                    </div>
+                    
+                    <!--Password input-->
+                    <div class="form-outline form-white mb-4">
+                      <input type="password" id="typePasswordX" class="form-control form-control-lg" placeholder="Password"/>
+                      <label class="form-label" for="typePasswordX"></label>
+                    </div>
+
+                    <div class="form-outline form-white mb-4">
+                        <input type="password" id="typePasswordX" class="form-control form-control-lg" placeholder="Password Confirm"/>
+                        <label class="form-label" for="typePasswordX"></label><br>
+                      </div>
+
+                      <div class="register-form-row">
+
+                        <div class="register-form-row-col"></div>
+                          <select name="year" onclick="call()">
+                            <option value="">Year</option>
+                            
+                            
+                           </select>
+                          <select name="month" onchange="call()" >
+                           <option value="">Month</option>
+                           <option value="1">Jan</option>
+                           <option value="2">Feb</option>
+                           <option value="3">Mar</option>
+                           <option value="4">Apr</option>
+                           <option value="5">May</option>
+                           <option value="6">Jun</option>
+                           <option value="7">Jul</option>
+                           <option value="8">Aug</option>
+                           <option value="9">Sep</option>
+                           <option value="10">Oct</option>
+                           <option value="11">Nov</option>
+                           <option value="12">Dec</option>
+                          </select>
+                          <select name="day" >
+                             <option value="">Day</option>
+                            </select>
+                                 </div>
+                         </div><br>
+
+      
+                      <div class="clearfix">
+                        <button type="button" class="btn btn-outline-light btn-lg px-5"><a href="index.html">Cancel</a></button>
+                        <button type="submit" class="btn btn-outline-light btn-lg px-5">Sign Up</button><br><br>
+                       
+                      
+                      <div id="grid">
+                        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+      </section>
+
+      <script type="text/javascript">
+        function call(){
+       var kcyear = document.getElementsByName("year")[0],
+        kcmonth = document.getElementsByName("month")[0],
+        kcday = document.getElementsByName("day")[0];
+             
+       var d = new Date();
+       var n = d.getFullYear();
+       for (var i = n; i >= 1950; i--) {
+        var opt = new Option();
+        opt.value = opt.text = i;
+        kcyear.add(opt);
+          }
+       kcyear.addEventListener("change", validate_date);
+       kcmonth.addEventListener("change", validate_date);
+      
+       function validate_date() {
+       var y = +kcyear.value, m = kcmonth.value, d = kcday.value;
+       if (m === "2")
+           var mlength = 28 + (!(y & 3) && ((y % 100) !== 0 || !(y & 15)));
+       else var mlength = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][m - 1];
+       kcday.length = 0;
+       for (var i = 1; i <= mlength; i++) {
+           var opt = new Option();
+           opt.value = opt.text = i;
+           if (i == d) opt.selected = true;
+           kcday.add(opt);
+       }
+           }
+          validate_date();
+        }
+      
+      
+       </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
