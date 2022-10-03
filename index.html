@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="photo.css" />
+  <link rel="stylesheet" href="index.css"/>
+ 
+</head>
+<body>
+
+<div id="mySidepanel" class="sidepanel">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#Skin care">Skin care</a>
+    <a href="#Foundation">Foundation</a>
+    <a href="#Mask">Mask</a>
+    <a href="#Body">Body</a>
+    <a href="#Cleansing">Cleansing</a>
+  </div>
+      
+
+
+<div class="topnav">
+    <button class="openbtn" onclick="openNav()" style="padding-bottom: 20px;">☰</button>
+  <a class="active" href="#home"span style="font-size: 150%;"><strong>COSMETICS</strong></span></a>
+  <a href="#" style="padding-bottom: 23px;">PRODUCT</a>
+  <a href="#" style="padding-bottom: 23px;">BEST</a>
+  <a href="#" style="padding-bottom: 23px;">NEW</a>
+  <a href="#" style="padding-bottom: 23px;">EVENT</a>
+  <a href="#" style="padding-bottom: 23px;">REVIEW</a>
+
+  <span class='green_window'>
+    <input id=text type="text" class='input_text' name="search" onkeydown="enterSearch()"/></span>
+    <input type="button" class='sch_smit' value="검색" onclick="myFunction()"/>
+
+  <div class="topnav-right">
+    <a href="#Cart" style="padding-bottom: 23px;">CART</a>
+    <a href="login.html" style="padding-bottom: 23px;">USER</a>
+  </div>
+</div>
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="photo2.jpg"style="width:100%">
+  <img class="mySlides" src="photo3.jpg" style="width:100%">
+  <img class="mySlides" src="photo4.jpg" style="width:100%">
+  <img class="mySlides" src="photo7.jpg" style="width:100%"><br>
+
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
+
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+    </script>
+
+<script>
+  function openNav() {
+    document.getElementById("mySidepanel").style.width = "250px";
+  }
+      
+  function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+  }
+  </script>
+
+<script type="text/javascript">
+  function enterSearch() {
+      if(event.keyCode == 13){
+          myFunction();  // 실행할 이벤트
+      }
+  }
+  function myFunction() {
+      var x = document.getElementById("text").value;
+      window.location.href = "http://cybertramp.net/search/"+x;
+  }
+  </script>
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+</body>
+</html>
