@@ -7,8 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="join.css" />
-    <title>회원가입 페이지</title>
+    <link rel="stylesheet" href="log-in.css" />
+    <title>사이트: 로그인</title>
 
   </head>
   <body>
@@ -42,41 +42,15 @@
                         <input type="password" id="typePasswordX" class="form-control form-control-lg" placeholder="Password Confirm"/>
                         <label class="form-label" for="typePasswordX"></label><br>
                       </div>
-
-                      <div class="register-form-row">
-
-                        <div class="register-form-row-col"></div>
-                          <select name="year" onclick="call()">
-                            <option value="">Year</option>
-                            
-                            
-                           </select>
-                          <select name="month" onchange="call()" >
-                           <option value="">Month</option>
-                           <option value="1">Jan</option>
-                           <option value="2">Feb</option>
-                           <option value="3">Mar</option>
-                           <option value="4">Apr</option>
-                           <option value="5">May</option>
-                           <option value="6">Jun</option>
-                           <option value="7">Jul</option>
-                           <option value="8">Aug</option>
-                           <option value="9">Sep</option>
-                           <option value="10">Oct</option>
-                           <option value="11">Nov</option>
-                           <option value="12">Dec</option>
-                          </select>
-                          <select name="day" >
-                             <option value="">Day</option>
-                            </select>
-                                 </div>
-                         </div><br>
-
       
                       <div class="clearfix">
-                        <button type="button" class="btn btn-outline-light btn-lg px-5"><a href="login.html">Cancel</a></button>
+                        <button type="button" class="btn btn-outline-light btn-lg px-5"><a href="log-in.html">Cancel</a></button>
                         <button type="submit" class="btn btn-outline-light btn-lg px-5">Sign Up</button><br><br>
-                       
+                        
+                        
+                        <label>
+                          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                        </label>
                       
                       <div id="grid">
                         <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
@@ -89,41 +63,6 @@
         </div>
         </div>
       </section>
-
-      <script type="text/javascript">
-        function call(){
-       var kcyear = document.getElementsByName("year")[0],
-        kcmonth = document.getElementsByName("month")[0],
-        kcday = document.getElementsByName("day")[0];
-             
-       var d = new Date();
-       var n = d.getFullYear();
-       for (var i = n; i >= 1950; i--) {
-        var opt = new Option();
-        opt.value = opt.text = i;
-        kcyear.add(opt);
-          }
-       kcyear.addEventListener("change", validate_date);
-       kcmonth.addEventListener("change", validate_date);
-      
-       function validate_date() {
-       var y = +kcyear.value, m = kcmonth.value, d = kcday.value;
-       if (m === "2")
-           var mlength = 28 + (!(y & 3) && ((y % 100) !== 0 || !(y & 15)));
-       else var mlength = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][m - 1];
-       kcday.length = 0;
-       for (var i = 1; i <= mlength; i++) {
-           var opt = new Option();
-           opt.value = opt.text = i;
-           if (i == d) opt.selected = true;
-           kcday.add(opt);
-       }
-           }
-          validate_date();
-        }
-      
-      
-       </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
