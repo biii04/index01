@@ -119,3 +119,17 @@ body {
 .sch_smit:hover {
   background: #56C82C;
 }
+@media(max-width :800px) {
+  .topnav {
+    display: block;
+  }
+
+  .topnav-right {
+    display: none;
+  }
+
+  .green_window {
+    display: none;
+  }
+
+}
